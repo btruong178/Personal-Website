@@ -3,5 +3,13 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: multiply;
+    color:antiquewhite;
 }
+
+.black-box {
+    background-color: rgba(0, 0, 0, 0.75); /* Black color with 50% opacity */
+    padding: 20px; /* Padding inside the box */
+    border-radius: 10px; /* Rounded corners */
+    display: inline-block;
+  }
 
