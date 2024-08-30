@@ -1,4 +1,4 @@
-function navbarscript() {
+function GenerateNavBar() {
     fetch("NavBar.html")
         .then(navbarhtml => {
             if (!navbarhtml.ok) {
@@ -13,4 +13,4 @@ function navbarscript() {
             console.error("An error has occured", Error)
         })
 }
-window.onload = navbarscript()
+window.onload = GenerateNavBar()
