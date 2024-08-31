@@ -1,16 +1,29 @@
-function GenerateNavBar() {
-    fetch("NavBar.html")
-        .then(navbarhtml => {
-            if (!navbarhtml.ok) {
-                throw new Error("Network Response was not ok")
+function fetchAndInsertHTML(url, elementId) {
+    return fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Network response was not ok");
             }
-            return navbarhtml.text()
+            return response.text();
         })
-        .then(text => {
-            document.getElementById('navbar-main').innerHTML = text
+        .then(html => {
+            document.getElementById(elementId).innerHTML = html;
         })
-        .catch(Error => {
-            console.error("An error has occured", Error)
-        })
+        .catch(error => {
+            console.error(`An error has occurred while fetching ${url}:`, error);
+            throw error; // Re-throw the error to propagate it to the caller
+        });
 }
-window.onload = GenerateNavBar()
+
+function generateContent() {
+    Promise.all([
+        fetchAndInsertHTML("NavBar.html", "navbar-main"),
+        fetchAndInsertHTML("Header.html", "header-main")
+    ]).then(() => {
+        console.log("All content loaded successfully");
+    }).catch(error => {
+        console.error("An error occurred while loading content:", error);
+    });
+}
+
+window.onload = generateContent;
