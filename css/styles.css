@@ -8,7 +8,6 @@ body {
     background-color: rgba(0, 0, 0, 0.288); /* Black color with 50% opacity */
     padding: 20px; /* Padding inside the box */
     border-radius: 10px; /* Rounded corners */
-    display: inline-block;
 }
 
 .intro-box {
@@ -60,4 +59,13 @@ body {
     max-width: 100vw; /* Ensure it doesn't exceed viewport width */
     max-height: 100vh; /* Ensure it doesn't exceed viewport height */
     object-fit: contain; /* Ensure the image scales down to fit within the container */
+}
+
+.portfolio {
+    text-decoration: underline;
+}
+
+.btn-custom {
+    background-color: #ff5733; /* Custom color */
+    color: white; /* Text color */
 }
