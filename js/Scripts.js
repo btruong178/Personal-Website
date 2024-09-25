@@ -18,7 +18,8 @@ function fetchAndInsertHTML(url, elementId) {
 function generateContent() {
     Promise.all([
         fetchAndInsertHTML("NavBar.html", "navbar-main"),
-        fetchAndInsertHTML("Header.html", "header-main")
+        fetchAndInsertHTML("Header.html", "header-main"),
+        fetchAndInsertHTML("Footer.html", "footer-main")
     ]).then(() => {
         console.log("All content loaded successfully");
     }).catch(error => {
