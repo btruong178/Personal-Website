@@ -1,6 +1,6 @@
 body {
-    background-color: rgb(116, 134, 116);
-    color: antiquewhite;
+    background-color: #cac0c0;
+    color: white;
     min-height: 100vh; /* Ensure the body is at least as tall as the viewport */
 }
 
@@ -17,6 +17,7 @@ body {
     background-size: cover; /* Ensure the background covers the entire body while maintaining aspect ratio */
     background-position: left; /* Center the background image */
     background-blend-mode: multiply;
+    color: white; /* Text color */
 }
 
 .profile-pic {
@@ -45,8 +46,12 @@ body {
 }
 
 .navlink-color {
-    color: antiquewhite;
+    color: white;
     margin-right: 30px;
+}
+
+.navlink-color:hover {
+    color: rgb(74, 128, 209); /* Custom hover color */
 }
 
 .navbar-font {
@@ -69,4 +74,40 @@ body {
 .btn-custom {
     background-color: #ff5733; /* Custom color */
     color: white; /* Text color */
+}
+
+.left-aligned-hr {
+    width: 80%; /* Adjust the width as needed */
+    margin: 20px 0; /* Vertical spacing */
+    border: none;
+    height: 2px; /* Thickness */
+    background-color: hsl(211, 98%, 21%); /* Color */
+    text-align: left; /* Ensure the line is left-aligned */
+}
+
+.homepage-content {
+    text-align: left; 
+    font-size: 1rem; 
+    font-family: Verdana, sans-serif;
+    color: white;
+}
+
+.about-me {
+    color: white
+}
+
+
+.black-text {
+    color: black;
+}
+
+.custom-btn {
+    background-color: hsl(211, 98%, 21%); /* Custom background color */
+    color: white; /* Custom text color */
+    border: none; /* Remove border if needed */
+}
+
+.custom-btn:hover {
+    background-color: white; /* Custom hover color */
+    color: hsl(211, 98%, 21%);
 }
