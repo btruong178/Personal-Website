@@ -11,7 +11,7 @@ function fetchAndInsertHTML(url, elementId) {
         })
         .catch(error => {
             console.error(`An error has occurred while fetching ${url}:`, error);
-            throw error; // Re-throw the error to propagate it to the caller
+            throw error;
         });
 }
 
@@ -27,4 +27,22 @@ function generateContent() {
     });
 }
 
-window.onload = generateContent;
+function loadFavicon(url) {
+    var link = document.getElementById('favicon');
+    if (link) {
+        link.href = url;
+    } else {
+        link = document.createElement('link');
+        link.id = 'favicon';
+        link.rel = 'icon';
+        link.href = url;
+        link.type = 'image/x-icon';
+        document.head.appendChild(link);
+    }
+}
+
+// Call the functions on page load
+window.onload = function() {
+    loadFavicon('images/favicon.ico');
+    generateContent();
+};

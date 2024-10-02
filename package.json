@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^6.0.0",
+    "autoprefixer": "^10.4.20",
+    "postcss-cli": "^11.0.0"
+  },
+  "scripts": {
+    "purgecss": "postcss css/styles.css -o css/styles.purged.css"
+  }
+}
